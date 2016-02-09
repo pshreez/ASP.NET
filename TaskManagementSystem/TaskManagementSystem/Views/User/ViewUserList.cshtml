@@ -1,0 +1,51 @@
+﻿
+
+<div ng-controller="UserListController" class="ContentActivities">
+
+
+    <input ng-model="query" placeholder="Search by user name" class="form-control form-control-inline SmallInputBox">
+
+      <table class="TMS-table">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Username </td>
+                <td>Email</td>
+                <td>Position</td>
+                <td>Joined on</td>
+            </tr>
+
+        </thead>
+        <tbody ng-repeat="User in Users | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage |filter:query as results">
+            <tr class="main-row" ng-click="toggleDetail($index,Project.PROJECT_ID,Project.ORG_ID)">
+                <td> {{User.U_FIRST_NAME + " "}}  {{User.U_LAST_NAME}}</td>
+               
+                <td>{{User.U_LOGIN_NAME}}</td>
+                <td>{{User.U_EMAIL}}</td>
+                <td>{{User.U_POSITION}}</td>
+                <td>{{User.U_REGISTER_DATE | jsonDate}}</td>
+            </tr>
+            
+        </tbody>
+          <tfoot ng-if="Users == ''"><tr><td colspan="5"> No users available</td></tr></tfoot>
+    </table>
+
+    <div class="pagination-div " style="padding-left:50px;">
+        <ul class="pagination">
+            <li ng-class="DisablePrevPage()">   <a href ng-click="prevPage()"> Prev</a> </li>
+            <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)"><a href>{{n+1}}</a>  </li>
+            <li ng-class="DisableNextPage()"><a href ng-click="nextPage()">Next </a> </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+
+    

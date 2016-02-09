@@ -1,0 +1,54 @@
+﻿
+
+<style>
+    .modal {
+        display: block;
+    }
+</style>
+<div >
+    <div class="modal-header">
+        <h3 class="modal-title">Update task here</h3>
+    </div>
+   
+        <form novalidate="novalidate" name="UpdateTaskStatusForm" ng-submit="UpdateTaskStatusFunc()">
+            <div class="modal-body" style="min-height:200px">
+               
+                <div style="color:blue">{{TaskStatus}} </div>
+              
+                <div form-group-validation="TASK_STATUS" class="form-row-dataset form-group">
+                    <label for="TASK_STATUS" class="view-label-tms col-md-2 control-label"> Status:</label>
+                    <div class="col-md-10">
+                        <select name="TASK_STATUS"  class="form-control " ng-model="Taskassign.TASK_STATUS" ng-class="Submitted?'ng-dirty':''" required autofocus >
+
+                            <option value="NOT STARTED">Not Started </option>
+                            <option value="ON PROGRESS">Progress </option>
+                            <option value="FINISHED">Finished</option>
+                        </select>
+                        <span class="form-error" ng-show="(UpdateTaskStatusForm.TASK_STATUS.$dirty || Submitted) && UpdateTaskStatusForm.TASK_STATUS.$error.required">* Status required</span>
+                    </div>                   
+                </div>
+                <div form-group-validation="TASK_HOUR_CONSUMED" class="form-row-dataset form-group">
+                    <label for="TASK_HOUR_CONSUMED" class="view-label-tms col-md-2 control-label">Hours:</label>
+                    <div class="col-md-10">
+
+                        <input type="number" name="TASK_HOUR_CONSUMED" class="form-control " ng-model="Taskassign.TASK_HOUR_CONSUMED" ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="form-error" ng-show="(UpdateTaskStatusForm.TASK_HOUR_CONSUMED.$dirty || Submitted) && UpdateTaskStatusForm.TASK_HOUR_CONSUMED.$error.required">*This is required</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Update" class="btn btn-default btn-success" />
+                        <button class="btn btn-warning"  ng-disabled="isDisabled" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+     </form>
+    
+   
+
+</div>
+
+
+

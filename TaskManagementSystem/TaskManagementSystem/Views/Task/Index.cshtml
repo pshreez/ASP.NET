@@ -1,0 +1,170 @@
+﻿
+<style>
+    .form-control-inline {
+        min-width: 0;
+        display: inline;
+    }
+
+    .full button span {
+        background-color: limegreen;
+        border-radius: 32px;
+        color: black;
+    }
+
+    .partially button span {
+        background-color: orange;
+        border-radius: 32px;
+        color: black;
+    }
+</style>
+
+<div  ng-controller="TaskController">
+    <div class="col-md-12">
+        <section id="TaskForm">
+            <br />
+            <form  novalidate ="novalidate" name="TaskForm" ng-submit="CreateTaskFunc()" class="form-horizontal">
+
+               
+                <div style="stroke-width:400px">  <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert></div>
+                
+                <div class="form-group">
+                    <label for="TASK_PROJECT_ID" class="view-label-tms col-md-2 control-label">Project:</label>
+                    <div class="col-md-10">
+
+                        <select name="TASK_PROJECT_ID" 
+                                class="form-control form-control-inline" 
+                                ng-model="Task.TASK_PROJECT_ID"
+                                ng-change="setDate(Task.TASK_PROJECT_ID)"
+                                ng-class="Submitted?'ng-dirty':''" required autofocus>
+                            <option value="" selected disabled>Please select project</option>
+
+                            <option ng-repeat="Task in ProjectList" value="{{Task.PROJECT_ID}}" ng-selected="true">
+                            {{Task.PROJECT_NAME}}
+                              
+                             </option>
+                            
+                        </select>
+                        <div ng-hide="ProjectDates">Start date: {{StartDate + '  '}} End date:{{EndDate}}</div>                       
+                        <span class="form-error" ng-show="(TaskForm.TASK_PROJECT_ID.$dirty || Submitted) && TaskForm.TASK_PROJECT_ID.$error.required">*Select project required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="TASK_NAME" class="view-label-tms col-md-2 control-label">Task Name:</label>
+                    <div class="col-md-10">
+                        <input type="text" name="TASK_NAME" class="form-control form-control-inline" 
+                              
+                               ng-model="Task.TASK_NAME" ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="form-error" ng-show="(TaskForm.TASK_NAME.$dirty || Submitted) && TaskForm.TASK_NAME.$error.required">*Task name required</span>
+                    </div>
+                </div>
+
+               
+                
+
+                <div class="form-group ">
+                    <label for="TASK_START_DATE" class="view-label-tms col-md-2 control-label">Start Date:</label>
+                    <div class="col-md-10">
+                        <input type="date" name="TASK_START_DATE" class="form-control form-control-inline " 
+                               ng-model="Task.TASK_START_DATE"
+                               ng-class="Submitted?'ng-dirty':''" required autofocus
+                               uib-datepicker-popup="shortDate"
+                               is-open="status.startOpened"
+                               min-date="minDate"
+                               max-date="maxDate"
+                               date-disabled="disabled(date, mode)"
+                               datepicker-options="dateOptions"
+                               ng-change="checkProjectStartDate(Task.TASK_START_DATE)" 
+                               ng-required="true"
+                               close-text="Close" />
+                        <span style="display: inline" class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openStart($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                        <span class="form-error" ng-show="(TaskForm.TASK_START_DATE.$dirty || Submitted) && TaskForm.TASK_START_DATE.$error.required">*Start date required</span>
+                    </div>
+                </div>
+
+               
+                <div class="form-group">
+                    <label for="TASK_END_DATE" class="view-label-tms col-md-2 control-label">End Date:</label>
+                    <div class="col-md-10">
+                       
+                        <input type="date" name="TASK_END_DATE" value="2015-08-12" class="form-control form-control-inline" 
+                               ng-model="Task.TASK_END_DATE "
+                               ng-class="Submitted?'ng-dirty':''" required autofocus
+                               uib-datepicker-popup="shortDate"
+                               is-open="status.endOpened"
+                               min-date="minDate"
+                               max-date="maxDate"
+                               date-disabled="disabled(date, mode)"
+                               datepicker-options="dateOptions"
+                                ng-change="checkProjectEndDate(Task.TASK_END_DATE)"
+                               ng-required="true"
+                               close-text="Close" />
+
+                        <span class="input-group-btn" style="display: inline">
+                            <button type="button" class="btn btn-default" ng-click="openEnd($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                        <span class="form-error" ng-show="(TaskForm.TASK_END_DATE.$dirty || Submitted) && TaskForm.TASK_END_DATE.$error.required">*End date required</span>
+                    </div>
+                </div>
+
+
+               
+
+
+                <div class="form-group">
+                    <label for="TASK_PRIORITY" class="view-label-tms col-md-2 control-label">Task Priority:</label>
+                    <div class="col-md-10">
+                        <select name="TASK_PRIORITY" class="form-control form-control-inline" ng-model="Task.TASK_PRIORITY" ng-required="true">                                                   
+                            <option value="MEDIUM">average</option>
+                            <option value="HIGH">high </option>
+                        </select>
+                        <span class="form-error" ng-show="(TaskForm.TASK_PRIORITY.$dirty || Submitted) && TaskForm.TASK_PRIORITY.$error.required">* Priority  required</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="PROJECT_PHASE" class="view-label-tms col-md-2 control-label">Project Phase:</label>
+                    <div class="col-md-10">
+                        <select name="PROJECT_PHASE" class="form-control form-control-inline" ng-model="Task.PROJECT_PHASE" ng-class="Submitted?'ng-dirty':''" required autofocus>
+                            <option value="design">Designing </option>
+                            <option value="coding"> Coding </option>
+                            <option value="database">Database </option>
+                        </select>
+                        <span class="form-error" ng-show="(TaskForm.PROJECT_PHASE.$dirty || Submitted) && TaskForm.PROJECT_PHASE.$error.required">*Project phase required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="TASK_ESTIMATED_HOUR" class="view-label-tms col-md-2 control-label">Hours:</label>
+                    <div class="col-md-10">
+
+                        <input type="number" name="TASK_ESTIMATED_HOUR" class="form-control form-control-inline" ng-model="Task.TASK_ESTIMATED_HOUR" ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="form-error" ng-show="(TaskForm.TASK_ESTIMATED_HOUR.$dirty || Submitted) && TaskForm.TASK_ESTIMATED_HOUR.$error.required">  required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="TASK_DESCRIPTION" class="view-label-tms col-md-2 control-label"> Description:</label>
+                    <div class="col-md-10">
+                        <textarea maxlength="200" rows="5" cols="20"  name="TASK_DESCRIPTION" class="form-control form-control-inline" ng-model="Task.TASK_DESCRIPTION" ng-class="Submitted?'ng-dirty':''" required autofocus></textarea>
+                        <span class="form-error" ng-show="(TaskForm.TASK_DESCRIPTION.$dirty || Submitted) && TaskForm.TASK_DESCRIPTION.$error.required">*Task description required</span>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="{{submitText}}" class="btn btn-default btn-success" />
+
+                    </div>
+                </div>
+
+
+            </form>
+        </section>
+    </div>
+
+</div>
+
+
+
+

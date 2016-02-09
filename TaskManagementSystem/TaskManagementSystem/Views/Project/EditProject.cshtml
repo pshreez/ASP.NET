@@ -1,0 +1,116 @@
+﻿
+<style>
+
+    .modal {
+    display: block;
+}
+</style>
+<div class="modal-header">
+    <h3 class="modal-title">Edit project, ID : {{Project.PROJECT_ID}}</h3>
+   
+</div>
+   
+    <form novalidate="novalidate" name="ProjectEditForm" ng-submit="EditProjectFunc()" class="tms-form form-horizontal">
+        
+        <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+        <div class="modal-body">
+
+
+            <div class="form-row-dataset form-group">
+                <label for="PROJECT_NAME" class="view-label-tms col-md-2 control-label">Project Name:</label>
+                <div class="col-md-10">
+                    <input type="text" name="PROJECT_NAME" class="form-control form-control-inline" ng-model="Project.PROJECT_NAME" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus />
+                    <span class="form-error" ng-show="(ProjectEditForm.PROJECT_NAME.$dirty || Submitted) && ProjectEditForm.PROJECT_NAME.$error.required">*Project name is required</span>
+                    <span class="form-error" ng-show="ProjectEditForm.PROJECT_NAME.$error.minlength">The length is too short</span>
+                </div>
+            </div>
+            <div class="form-row-dataset form-group">
+                <label for="PROJECT_START_DATE" class="view-label-tms col-md-2 control-label">Start Date:</label>
+                <div class="col-sm-10">
+                    <input type="date" name="PROJECT_START_DATE" class="form-control form-control-inline "
+                               ng-model="Project.PROJECT_START_DATE"
+                               ng-class="Submitted?'ng-dirty':''" required autofocus
+                               uib-datepicker-popup
+                               is-open="status.startOpened"
+                               min-date="minDate"
+                               max-date="maxDate"
+                               datepicker-options="dateOptions"
+                               ng-required="true"
+                               close-text="Close"
+                               readonly="readonly"
+                               placeholder=" MM DD YYYY" />
+                    <span style="display: inline" class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="openStart($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    <span class="form-error" ng-show="(ProjectEditForm.PROJECT_START_DATE.$dirty || Submitted) && ProjectEditForm.PROJECT_START_DATE.$error.required">*Start date required</span>
+                </div>
+            </div>
+
+            <div class="form-row-dataset form-group">
+                <label for="PROJECT_END_DATE" class="view-label-tms col-md-2 control-label">End Date:</label>
+                <div class="col-md-10">
+                    <input type="date" name="PROJECT_END_DATE"  class="form-control form-control-inline"
+                           ng-model="Project.PROJECT_END_DATE "
+                               ng-class="Submitted?'ng-dirty':''" required autofocus
+                               uib-datepicker-popup
+                               is-open="status.endOpened"
+                               min-date="minDate"
+                               max-date="maxDate"
+                               datepicker-options="dateOptions"
+                               ng-required="true"
+                               close-text="Close" readonly="readonly"
+                               placeholder=" MM DD YYYY"/>
+
+                    <span class="input-group-btn" style="display: inline">
+                        <button type="button" class="btn btn-default" ng-click="openEnd($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    <span class="form-error" ng-show="(ProjectEditForm.PROJECT_END_DATE.$dirty || Submitted) && ProjectEditForm.PROJECT_END_DATE.$error.required">*End date required</span>
+                </div>
+            </div>
+
+            <div class=" form-row-dataset form-group">
+                <label for="PROJECT_STATUS" class="view-label-tms col-md-2 control-label">Status:</label>
+                <div class="col-md-10">
+                    <select name="PROJECT_STATUS" class="form-control  form-control-inline" ng-model="Project.PROJECT_STATUS" ng-required="true">
+                        <option value="NOT STARTED">Not Started</option>
+                        <option value="ON PROGRESS">On Progress</option>
+                        <option value="FINISHED">Completed</option>
+                    </select>
+                    <span class="form-error" ng-show="(ProjectEditForm.PROJECT_STATUS.$dirty || Submitted) && ProjectEditForm.PROJECT_STATUS.$error.required">*Project Status is not selected</span>
+                </div>
+            </div>
+
+            <div class=" form-row-dataset form-group">
+                <label for="ORG_ID" class="view-label-tms col-md-2 control-label">Organization:</label>
+                <div class="col-md-10">
+
+                    <select name="ORG_ID" class="form-control  form-control-inline" ng-model="Project.ORG_ID" ng-required="true">
+                        <option ng-repeat="Project in OrgList" value="{{Project.ORG_ID}}" ng-selected="true">{{Project.ORG_NAME}}</option>
+                    </select>
+                    <span class="form-error" ng-show="(ProjectEditForm.ORG_ID.$dirty || Submitted) && ProjectEditForm.ORG_ID.$error.required">*Organization is not selected</span>
+                </div>
+            </div>
+
+            <div class="form-row-dataset form-group">
+                <label for="PROJECT_DESCRIPTION" class="view-label-tms  col-md-2 control-label"> Description:</label>
+                <div class="col-md-10">
+                    <textarea maxlength="200" rows="5" cols="20" name="PROJECT_DESCRIPTION" class="form-control form-control-inline" ng-model="Project.PROJECT_DESCRIPTION" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus></textarea>
+                    <span class="form-error" ng-show="(ProjectEditForm.PROJECT_DESCRIPTION.$dirty || Submitted) && ProjectEditForm.PROJECT_DESCRIPTION.$error.required">*Description is required</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <div class="form-row-dataset form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="{{submitText}}" class="btn btn-default btn-success" />
+                    <button class="btn btn-warning" ng-disabled="isDisabled" ng-click="cancel()" style="float:right">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+   

@@ -1,0 +1,56 @@
+﻿
+
+<div ng-controller="DiscussionCreateController"  class="ContentActivities">
+    <div class="col-md-12">
+
+       
+
+
+
+
+        <section id="DiscussForm">                 
+            <div class="form-row-dataset form-group">
+                <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+                <form novalidate="novalidate" name="DiscussionForm" 
+                      ng-submit="DiscussionTaskFunc()"
+                       class="form-horizontal">
+                    <div class="form-row-dataset form-group">
+                        <div class="col-md-10">
+                            <input type="text"  
+                                   name="DISCUSS_TITLE" 
+                                   class="form-control form-control-inline"
+                                    ng-model="Discussion.DISCUSS_TITLE"
+                                    placeholder="keywords separated by ," 
+                                    ng-class="Submitted?'ng-dirty':''" ng-required="true"/>                      
+                            <span class="form-error" 
+                                  ng-show="(DiscussionForm.DISCUSS_TITLE.$dirty || Submitted)
+                                   && DiscussionForm.DISCUSS_TITLE.$error.required">*Description is empty</span>
+                         </div>
+                        </div>
+
+                        <div class="form-row-dataset form-group">
+                            <div class="col-md-10">
+                                <textarea maxlength="200" rows="2" cols="50" 
+                                          name="DISCUSSION_TEXT" class="form-control form-control-inline"
+                                           ng-model="Discussion.DISCUSSION_TEXT" ng-class="Submitted?'ng-dirty':''" ng-required="true" placeholder="content" autofocus></textarea>
+                                <span class="form-error"
+                                      ng-show="(DiscussionForm.DISCUSSION_TEXT.$dirty || Submitted)
+                                   && DiscussionForm.DISCUSSION_TEXT.$error.required">* Empty text</span>
+                            
+                            
+                            </div>
+                        </div>
+                        <div class="form-row-dataset form-group">
+                            <div class=" col-md-10">
+                                <input type="submit" value="{{submitText}}" class="btn btn-default btn-success" />
+
+                            </div>
+                        </div>
+              </form>                   
+           </div>                       
+        </section>
+    </div>
+
+</div>
+
+

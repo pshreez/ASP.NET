@@ -1,0 +1,73 @@
+﻿<style>
+     .nav-pills{       
+         display:inline;
+     }
+    .Maintab {
+        background-color: #7ca6fc;
+    }
+
+       
+
+    .nav-pills > li > a {
+        border-radius: 0px;
+    }
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+     color: black;
+     background-color:#f7f7e8;
+    
+
+     }
+
+
+
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+       text-decoration:underline;
+       font-weight:bold;
+        color: #7ca6fc;
+    }
+    .HomeMenuTab{
+         width:auto;
+        border:1px solid #808080;
+  
+        
+        background-color:#f7f7e8;
+        border:1px solid #eae7d4;
+        width:auto;
+       
+    }
+    div.tab-container ul{
+        display :inline;
+        width:auto;
+        clear :left;
+    }
+   div.tab-container .nav-pills{
+        float:right;
+        width:200px;
+       
+    }
+    nav > li > a {
+       
+        display: block;
+        padding: 10px 15px;
+    }
+    
+    
+</style>
+
+
+
+<div class="clearfix">
+
+    <div class="HomeMenuTab"  >
+       
+        <tabs data="tabData" type="pills"> </tabs>
+        <div style="clear:both"></div>
+    </div>
+   
+    <div >
+        <div ui-view autoscroll="false" class="HomeUserView"> </div>
+    </div>
+  
+</div>
+

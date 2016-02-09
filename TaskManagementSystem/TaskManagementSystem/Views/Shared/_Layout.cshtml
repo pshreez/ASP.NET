@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title-placeholder ui-view="title"></title-placeholder>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/AngularJS")
+    
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <style>
+  
+    </style>
+</head>
+<body ng-app="MyApp" >
+    
+ 
+    <div class="body-content"  >                 
+        @RenderBody()          
+    </div>
+        
+    @Scripts.Render("~/bundles/AngularJS")
+   
+    @RenderSection("scripts", required: false)
+</body>
+</html>

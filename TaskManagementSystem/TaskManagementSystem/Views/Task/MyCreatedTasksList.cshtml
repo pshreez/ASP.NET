@@ -1,0 +1,79 @@
+﻿<div ng-controller="ProjectTasksListController" class="ContentActivities">
+
+    <div style="padding-bottom:8px;">
+
+        <select name="TASK_PROJECT_ID"
+                class="form-control form-control-inline"
+                ng-model="Task.TASK_PROJECT_ID"
+                ng-change="OnselectProject(Task.TASK_PROJECT_ID)"
+                ng-class="Submitted?'ng-dirty':''" required autofocus>
+            <option value="" selected >Please select project</option>
+            <option ng-repeat="Task in ProjectList" value="{{Task.PROJECT_ID}}" >
+                {{Task.PROJECT_NAME}}
+            </option>
+        </select>
+        <input ng-model="query" placeholder="Search by name" class="SmallInputBox form-control form-control-inline">
+    </div>              
+      
+        <div style="margin-top:12px;" ng-if="ProjectList != ''">
+            <table class="TMS-table">
+                <thead>
+                    <tr>
+                        <td>Task </td>
+                        <td>Name </td>
+                        <td>Start date</td>
+                        <td>End date</td>
+                        <td>Status</td>
+                        <td>Created on </td>
+                    </tr>
+
+                </thead>
+                <tbody ng-repeat="Task in Tasks | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage |filter:query as results">
+                    <tr class="main-row" ng-click="toggleDetail($index,Task.TASK_ID)">
+                        <td> {{Task.TASK_ID}}</td>
+                        <td> {{Task.TASK_NAME}}</td>
+                        <td>{{Task.TASK_START_DATE | jsonDate}}</td>
+                        <td>{{Task.TASK_END_DATE | jsonDate}}</td>
+                        <td>{{Task.TASK_STATUS}}</td>
+                        <td>{{Task.U_TASK_CREATE_DATE | jsonDate}}</td>
+
+                    </tr>
+                    <tr class="extra-row" ng-show="activePosition == $index" style="background:white">
+                        <td colspan="6" style="background:white">
+                            <button ng-click="EditTask(Task)">Edit Task</button>
+                           <div ng-if="AssignedUsers != ''"> Assigned users :
+                            <ul ng-repeat="User in AssignedUsers" style="display:inline">
+                                
+                                <li style="display:inline">{{User.U_LOGIN_NAME}} </li>
+                               
+                            </ul>   
+                           </div>
+                            <div ng-if="AssignedUsers == ''">
+                                Not Assigned
+                                <button ng-click="AssignUsers(Task.TASK_ID,Task.TASK_PROJECT_ID)"> Assign  </button>
+                           </div>
+                           </td>
+                    </tr>
+                   
+                    
+                </tbody>
+               
+                <tfoot><tr ng-if="Tasks == ''"><td colspan="6">** No Projects available **</td></tr></tfoot>
+            </table>
+
+
+
+            <div class="pagination-div " style="padding-left:50px;">
+                <ul class="pagination">
+                    <li ng-class="DisablePrevPage()">   <a href ng-click="prevPage()"> Prev</a> </li>
+                    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)"><a href>{{n+1}}</a>  </li>
+                    <li ng-class="DisableNextPage()"><a href ng-click="nextPage()">Next </a> </li>
+                    <li> <span style="color:#697df5">  Total :{{availableTasks}} </span>  </li>
+                </ul>
+            </div>
+
+       </div>
+    
+   
+      
+    </div>

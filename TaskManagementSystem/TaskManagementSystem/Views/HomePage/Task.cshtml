@@ -1,0 +1,41 @@
+﻿<style>
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        color: black;
+        background-color: white;
+        border-bottom: 2px solid #0094ff;
+    }
+
+    .nav-pills > li > a {
+        border-radius: 0px;
+    }
+
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        /* color: #ffffff; */
+        /* background-color: #428bca; */
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: white;
+    }
+
+    a:hover {
+        color: #3A2E2E;
+    }
+</style>
+<div>
+    <div style="margin-left:50px;">
+        <uib-tabset type="pills">
+
+            <uib-tab ng-repeat="tab in tabs"
+                     heading="{{tab.title}}"
+                     active="tab.active"
+                     select="go(tab.route)"
+                     disable="tab.disabled">
+            </uib-tab>
+        </uib-tabset>
+    </div>
+    <div style="margin-left:15px;">
+        <div ui-view autoscroll="none" class="TaskActivitiesView"> </div>
+    </div>
+</div>

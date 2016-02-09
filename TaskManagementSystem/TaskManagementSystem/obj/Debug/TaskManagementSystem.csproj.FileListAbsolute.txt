@@ -1,0 +1,162 @@
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\csc.exe
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\vbc.exe
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\VBCSCompiler.exe
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.dll.config
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.pdb
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Antlr3.Runtime.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.SqlServer.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Newtonsoft.Json.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Net.Http.Formatting.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Helpers.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.WebHost.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Mvc.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Optimization.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Razor.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Deployment.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Razor.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\WebGrease.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.SqlServer.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Helpers.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Mvc.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Optimization.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Razor.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Deployment.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Razor.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Antlr3.Runtime.pdb
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\Newtonsoft.Json.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Net.Http.Formatting.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.WebHost.xml
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.dll
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.pdb
+D:\PRAIRIE VIEW A&M\4th Semester\final project\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\csc.exe
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\vbc.exe
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\VBCSCompiler.exe
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.dll.config
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.pdb
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Antlr3.Runtime.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.SqlServer.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Newtonsoft.Json.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Helpers.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Mvc.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Optimization.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Razor.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\WebGrease.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.SqlServer.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Helpers.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Mvc.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Optimization.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Razor.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Antlr3.Runtime.pdb
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\Newtonsoft.Json.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.pdb
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\csc.exe
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\vbc.exe
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\VBCSCompiler.exe
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.dll.config
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\TaskManagementSystem.pdb
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Antlr3.Runtime.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.SqlServer.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Newtonsoft.Json.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Helpers.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Mvc.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Optimization.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Razor.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\WebGrease.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\EntityFramework.SqlServer.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Helpers.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Mvc.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Optimization.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Razor.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Antlr3.Runtime.pdb
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\Newtonsoft.Json.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.dll
+C:\Users\shreejana\Dropbox\finalproject1_11_2015\12-1-2015\TaskManagementSystem\TaskManagementSystem\obj\Debug\TaskManagementSystem.pdb

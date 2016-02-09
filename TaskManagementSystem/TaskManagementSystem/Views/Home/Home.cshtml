@@ -1,0 +1,42 @@
+﻿
+
+<div >
+
+
+    <div class="menu" ng-if="!IsLoggedIn">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-left" style="padding-left:100px">
+                    <li ng-class="{active: $state.includes('home')}">
+                        <a class="brand" ui-sref="home">Home</a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="liststyle" ng-class="{active: $state.includes('login')}">
+                        <a class="brand" ui-sref="login">Login</a>
+                    </li>
+                    <li ng-class="{active: $state.includes('register')}"> <a class="brand" ui-sref="register">Register</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <span> {{}}</span>
+</div>
+
+<div class="row" style="margin-top:20px;height:500px">
+<pre>
+    Project management System using 
+    ASP.NET  framework 4.6, MVC5 and Angular JS.
+    SQL Server Express 2014 for database in the AWS EC2
+
+</pre>
+    
+    	
+
+
+
+</div>

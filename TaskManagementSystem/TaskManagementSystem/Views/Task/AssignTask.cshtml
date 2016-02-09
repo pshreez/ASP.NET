@@ -1,0 +1,78 @@
+﻿<style>
+
+
+
+
+</style>
+
+<div ng-controller="AssignTaskController">
+   
+        <div class="col-md-12">
+            <section id="AssignTaskForm">
+
+                <form  novalidate="novalidate" name="AssignTaskForm" ng-submit="AssignTaskFunc()" class="tms-form form-horizontal" >
+                   
+                    
+                     
+                    <div class="form-group">
+                        
+                        <label for="PROJECT_ID" class="view-label-tms col-md-2 control-label">Project:</label>
+                        <div class="col-md-10">
+                            <select name="PROJECT_ID" class="form-control  form-control-inline" ng-model="TaskAssign.PROJECT_ID" ng-change="GetTasks()"  ng-required="true" >
+                                <option value="" selected disabled>Please select project</option>
+                                <option ng-repeat="TaskAssign in ProjectList" value="{{TaskAssign.PROJECT_ID}}">{{TaskAssign.PROJECT_NAME}} </option>
+
+                            </select>
+
+                            <span class="form-error" ng-show="(AssignTaskForm.PROJECT_ID.$dirty || Submitted) && AssignTaskForm.PROJECT_ID.$error.required">*This is  required</span>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="TASK_ID_ASSIGNED" class="view-label-tms col-md-2 control-label">Task:</label>
+                        <div class="col-md-10">
+                            <select name="TASK_ID_ASSIGNED" class="form-control form-control-inline " ng-model="TaskAssign.TASK_ID_ASSIGNED"   ng-required="true" >                               
+                                <option value="" selected disabled>Please select task</option>
+                                <option ng-repeat="TaskAssign in Tasks" value="{{TaskAssign.TASK_ID}}">{{TaskAssign.TASK_NAME}}{{Nodata}} </option>
+
+                            </select>
+                            <span class="form-error" ng-show="Notask">*No task available</span>
+                            <span class="error" ng-show="(AssignTaskForm.TASK_ID_ASSIGNED.$dirty || Submitted) && AssignTaskForm.TASK_ID_ASSIGNED.$error.required">  required</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="TASK_USER_ID" class="view-label-tms col-md-2 control-label">Users:</label>
+                        <div class="col-md-10">                        
+                           <div ng-dropdown-multiselect="" options="UsersList" ng-model="TaskAssign.TASK_USER_ID" selected-model="Usermodel" checkboxes="true" extra-settings="UserDropdownsettings"  ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus></div>                                
+                           
+                            
+                             <!----div style="float: left" ng-repeat="selectedData in Usermodel">
+                                
+                                <button ng-click="removeFirstItem(selectedData)">
+                                    {{selectedData.id + '   ' +'x'}}  
+                                </button>  
+                                 <div>
+                                   {{getUsername(selectedData.id)}}
+                                 </div>                                                           
+                            </!--div--->                                                      
+                           
+                            <span class="form-error" ng-show="NoUserSelected"></span>                                         
+                         </div>                      
+                    </div>
+                                     
+                    <div class="form-row-dataset form-group">
+                        <div class="col-md-offset-2  col-md-10">
+                            <input type="submit" value="{{SubmitText}}" class="btn btn-default btn-success" />
+
+                        </div>
+                    </div>
+                    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+                 </form>
+               
+                </section>
+            </div>
+    </div>
+
+
+
+

@@ -1,0 +1,65 @@
+﻿<style>
+
+table {
+    width: 100%
+}
+
+.main-row {
+    cursor: pointer;
+}
+
+.main-row:hover {
+    background-color: #ddd;
+}
+
+.extra-row {
+    background-color: #aea !important;
+}
+
+</style>
+<div>
+
+
+    <div ng-controller="DeadlineProjectsController" class="ContentActivities">
+        <div style="display:inline" ng-if="pieDiskData.data == ''">
+            ** No task available **
+        </div>
+        <div style="display:inline" ng-if="pieDiskData.data != ''">
+            <span style="color:#0094ff; font-weight:bold;">PROJECT STATUS</span>
+            <canvas id="pie33" options="options" class="chart chart-pie chart-xs ng-isolate-scope" height="100" width="200" data="pieDiskData.data"
+                     labels="pieDiskData.labels" colours="pieDiskData.colours" chart-legend="true"></canvas>
+        </div>
+
+
+        <!----table class="TMS-table" >
+            <caption> Project Deadlines</caption>
+            <thead>
+                <tr> 
+                <td>Project ID</td>
+                <td>Project Name </td>
+                <td>Remaining Days</td></tr>
+                
+            </thead>
+            <tbody ng-repeat="Project in DeadlineProjects | limitTo:5">
+                <tr class="main-row" ng-click="toggleDetail($index)">
+                    <td> {{Project.PROJECT_ID}}</td>
+                    <td> {{Project.PROJECT_NAME}}</td>
+                    <td>{{Project.Days}}</td>
+                </tr>
+                <tr class="extra-row" ng-show="activePosition == $index">
+                <td colspan="3">
+                    <div style="display:inline;float:left">
+                      <div>Start Date: {{Project.PROJECT_START_DATE | jsonDate}}</div>  
+                      <div>End Date:{{Project.PROJECT_END_DATE | jsonDate}}</div> 
+                    </div>
+                    <div style="display:inline;float:right">
+
+                    </div>
+                   
+                </td>
+                </tr>
+            </tbody>
+            <tfoot ng-if="DeadlineProjects == ''"><tr><td>** No Deadline projects Available</td></tr></tfoot>
+        </table -->
+    </div>
+</div>

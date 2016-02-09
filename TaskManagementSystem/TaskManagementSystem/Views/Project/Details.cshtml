@@ -1,0 +1,31 @@
+﻿
+
+<div ng-controller="ProjectDetailController">
+
+    <ul ng-repeat=" details int Project">
+             <li> {{details.PROJECT_NAME}}</li>
+    </ul>
+    <table>
+        <tr>
+            <td>Name </td>
+            <td>{{Project.PROJECT_NAME+ " "}}</td>
+        </tr>
+        <tr>
+            <td> Start Date </td>
+            <td>{{Project.PROJECT_START_DATE}}</td>
+        </tr>
+        <tr>
+            <td> End Date </td>
+            <td>{{Project.PROJECT_END_DATE}}</td>
+        </tr>
+        <tr>
+            <td>Position</td>
+            <td>{{Project.PROJECT_DESCRIPTION}}</td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+

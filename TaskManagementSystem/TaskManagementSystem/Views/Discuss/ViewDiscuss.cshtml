@@ -1,0 +1,37 @@
+﻿
+<div ng-controller="ViewDiscussionController" class="ContentActivities">
+    <uib-accordion close-others="oneAtATime" >
+        <div ng-if="Discussions == ''">
+            **No discussions**
+        </div>
+
+        <uib-accordion-group style="border-radius:0px;width:600px" heading="{{Discuss.DISCUSSION_TEXT}}" ng-repeat="Discuss in Discussions" ng-click="getUser(Discuss.DISCUSSION_USER_ID)">
+          <div class="TitleDiscussion">
+            <i>Created on : {{Discuss.DISCUSSION_POST_DATE | jsonDate}}</i>   by 
+            <b>{{UserFullName.U_FIRST_NAME + ' ' + UserFullName.U_LAST_NAME}}</b>
+          </div>
+          <div class="Discussion" ng-if="DiscussionRep != ''">
+              <div ng-repeat="item in items">{{item}}</div>
+          </div>
+
+           <div ng-show="ReplyTextArea">
+               <form ng-submit="ReplySubmit(Discuss.DISCUSSION_ID)">
+                   <textarea maxlength="200" rows="2" cols="100"
+                             name="D_THREAD_TEXT" class="form-control form-control-inline"
+                             ng-model="DiscussionThread.D_THREAD_TEXT" ></textarea>
+                   <input type="submit"value="Reply" />
+               </form>
+              
+           </div>
+            <input type="button" value="Post" ng-click="ReplyDiscussion(Discuss.DISCUSSION_ID)" ng-show="HideButton"/>
+           
+         </uib-accordion-group>
+
+        
+
+    </uib-accordion>
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+
+</div>
+
+

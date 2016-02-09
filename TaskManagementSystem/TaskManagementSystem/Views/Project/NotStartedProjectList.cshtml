@@ -1,0 +1,71 @@
+﻿<style>
+
+
+</style>
+
+<div ng-controller="ProjectNotStartedListController">
+    <table class="TMS-table">
+        <thead>
+            <tr>
+                <td>Project ID</td>
+                <td>Name </td>
+                <td>Start date</td>
+                <td>End date</td>
+                <td>Status</td>
+                <td>Created date</td>
+            </tr>
+
+        </thead>
+        <tbody ng-repeat="Project in MyProjects | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage |filter:query as results">
+            <tr class="main-row" ng-click="toggleDetail($index,Project.PROJECT_ID,Project.ORG_ID)">
+                <td> {{Project.PROJECT_ID}}</td>
+                <td> {{Project.PROJECT_NAME}}</td>
+                <td>{{Project.PROJECT_START_DATE | jsonDate}}</td>
+                <td>{{Project.PROJECT_END_DATE | jsonDate}}</td>
+                <td>{{Project.PROJECT_STATUS}}</td>
+                <td>{{Project.U_PROJECT_CREATE_DATE |jsonDate}}</td>
+
+               
+            </tr>
+            <tr class="extra-row" ng-show="activePosition == $index" style="background:white">
+                <td colspan="6" style="background:white">
+                    <div style="display:inline;float:left;background:white">
+                        <div class="display-inline">
+                            <div  style="width:400px">
+                                <span style="width:100px"> Organization:</span>
+                                <span>{{OrgName}}</span> 
+
+                             </div>
+                            <div  >
+                                <span style="width:100px">Project Description:</span>
+                                <span>{{Project.PROJECT_DESCRIPTION}}</span>
+                            </div>
+                          </div>
+                        <div class="display-inline"><button ng-click="EditProject(Project)">Edit project</button></div>
+                        <div ng-if="Tasks != ''">
+                           
+                        <a ui-sref="user.Projects.mTasks({pid: {{ Project.PROJECT_ID}}})">{{Tasks.length + ' '}} Tasks Available</a>  
+                        </div>
+
+                        <div ng-if="Tasks == ''">**No tasks Available **</div>
+                    </div>
+                    <div style="display:inline;float:right">
+                    </div>
+                </td>
+            </tr>
+           
+        </tbody>
+        <tfoot><tr ng-if="MyProjects == ''"><td colspan="6">** No Projects available **</td></tr></tfoot>
+    </table>
+
+
+
+    <div class="pagination-div " style="padding-left:50px;">
+        <ul class="pagination">
+            <li ng-class="DisablePrevPage()">   <a href ng-click="prevPage()"> Prev</a> </li>
+            <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)"><a href>{{n+1}}</a>  </li>
+            <li ng-class="DisableNextPage()"><a href ng-click="nextPage()">Next </a> </li>
+            <li> <span style="color:#697df5"> Total:{{availableProjects}} </span>  </li>
+        </ul>
+    </div>
+</div>

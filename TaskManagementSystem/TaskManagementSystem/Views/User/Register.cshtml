@@ -1,0 +1,136 @@
+﻿
+<div>
+
+
+    <div class="menu" ng-if="!IsLoggedIn">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-left" style="padding-left:100px">
+                    <li ng-class="{active: $state.includes('home')}">
+                        <a class="brand" ui-sref="home">Home</a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="liststyle" ng-class="{active: $state.includes('login')}">
+                        <a class="brand" ui-sref="login">Login</a>
+                    </li>
+                    <li ng-class="{active: $state.includes('register')}"> <a class="brand" ui-sref="register">Register</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <span> {{}}</span>
+</div>
+
+
+
+
+<div ng-controller="RegisterController">
+    <div class="col-md-8" style="float:right">
+        <section id="RegisterForm">
+            <div class="success">Register user here</div>
+            <div class="error" ng-show="Iserror">{{RegisterErrorMessage}} </div>
+            <div class="success" ng-show="!IsSuccess">{{RegisterMessage}} </div>
+            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.RegisterMessage"></div>
+            <form novalidate="novalidate" name="RegisterForm" ng-submit="UserRegisterFunc()" class="tms-form form-horizontal">
+
+                <div form-group-validation="U_FIRST_NAME" class="form-row-dataset form-group">
+                    <label for="U_FIRST_NAME" class="view-label-tms col-md-2 control-label">First Name:</label>
+                    <div class="col-md-10">
+                        <input type="text" name="U_FIRST_NAME" class="form-control form-control-inline" ng-model="User.U_FIRST_NAME" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus />
+                        <span class="form-error" ng-show="(RegisterForm.U_FIRST_NAME.$dirty || Submitted) && RegisterForm.U_FIRST_NAME.$error.required">*First Name is required</span>
+
+                    </div>
+                </div>
+                <div form-group-validation="U_LAST_NAME" class="form-row-dataset form-group">
+                    <label for="U_LAST_NAME" class="view-label-tms col-md-2 control-label">Last Name:</label>
+                    <div class="col-md-10">
+                        <input type="text" name="U_LAST_NAME" class="form-control form-control-inline" ng-model="User.U_LAST_NAME" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus />
+                        <span class="form-error" ng-show="(RegisterForm.U_LAST_NAME.$dirty || Submitted) && RegisterForm.U_LAST_NAME.$error.required">*Last Name is  required</span>
+                    </div>
+                </div>
+                <div form-group-validation="U_LOGIN_NAME" class="form-row-dataset form-group">
+                    <label for="U_LOGIN_NAME" class="view-label-tms col-md-2 control-label">Username:</label>
+                    <div class="col-md-10">
+                        <input type="text" name="U_LOGIN_NAME" class="form-control form-control-inline" ng-model="User.U_LOGIN_NAME" ng-class="Submitted?'ng-dirty':''"
+                               ng-unique
+                               ng-keydown="removeTagOnBackspace($event)"
+                               ng-minlength=5
+                               ng-maxlength=10
+                               ng-required="true" autofocus />
+                        <span class="form-error" ng-show="(RegisterForm.U_LOGIN_NAME.$dirty || Submitted) && RegisterForm.U_LOGIN_NAME.$error.required">*Username is  required</span>
+                        <span class="form-error" ng-show=" !RegisterForm.U_LOGIN_NAME.$error.required && RegisterForm.U_LOGIN_NAME.$error.unique">Username is already taken</span>
+                        <span class="form-error" ng-show="!RegisterForm.U_LOGIN_NAME.$error.minlength && !RegisterForm.U_LOGIN_NAME.$error.maxlength && !RegisterForm.U_LOGIN_NAME.$error.required && !RegisterForm.U_LOGIN_NAME.$error.unique">*Available</span>
+                        <span class="form-error"
+                              ng-show="RegisterForm.U_LOGIN_NAME.$error.maxlength">
+                            Username is long
+                        </span>
+                        <span class="form-error"
+                              ng-show="RegisterForm.U_LOGIN_NAME.$error.minlength">
+                            Username is short
+                        </span>
+                    </div>
+                </div>
+                <div form-group-validation="U_EMAIL" class="form-row-dataset form-group">
+                    <label for="U_EMAIL" class="view-label-tms col-md-2 control-label">Email ID:</label>
+                    <div class="col-md-10">
+                        <input type="email" name="U_EMAIL" class="form-control form-control-inline" ng-model="User.U_EMAIL" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus />
+                        <span class="form-error" ng-show="(RegisterForm.U_EMAIL.$dirty || Submitted) && RegisterForm.U_EMAIL.$error.required ">
+                            *Email is required.
+                        </span>
+                        <span class="form-error" ng-show="RegisterForm.U_EMAIL.$error.email">*Invalid email address.</span>
+                    </div>
+                </div>
+
+
+                <div form-group-validation="U_POSITION" class="form-row-dataset form-group">
+                    <label for="U_POSITION" class="view-label-tms col-md-2 control-label">User Type:</label>
+                    <div class="col-md-10">
+                        <select name="U_POSITION" class="form-control form-control-inline" ng-model="User.U_POSITION" ng-required="true" autofocus>
+                            <option value="manager">Manager</option>
+                            <option value="developer">Developers</option>
+                        </select>
+                        <span class="form-error" ng-show="(RegisterForm.U_POSITION.$dirty || Submitted) && RegisterForm.U_POSITION.$error.required">*Position isn't selected</span>
+                    </div>
+                </div>
+
+                <div form-group-validation="U_PASSWORD" class="form-row-dataset form-group">
+                    <label for="U_PASSWORD" class="view-label-tms col-md-2 control-label">Password:</label>
+                    <div class="col-md-10">
+                        <input type="password" class="form-control form-control-inline" name="U_PASSWORD" ng-model="User.U_PASSWORD" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus />
+                        <span class="form-error" ng-show="(RegisterForm.U_PASSWORD.$dirty || Submitted) && RegisterForm.U_PASSWORD.$error.required">*Password is required</span>
+                    </div>
+                </div>
+
+
+                <div form-group-validation="CORFIRM_PASSWORD" class="form-group">
+                    <label for="CORFIRM_PASSWORD" class="view-label-tms col-md-2 control-label">Retype Password:</label>
+                    <div class="col-md-10">
+                        <input type="password" class="form-control form-control-inline" name="CORFIRM_PASSWORD" ng-model="User.CORFIRM_PASSWORD" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus />
+                        <span class="form-error" ng-show="(RegisterForm.CORFIRM_PASSWORD.$dirty || Submitted) && RegisterForm.CORFIRM_PASSWORD.$error.required">*Confirm required</span>
+                        <span class="form-error" ng-show="(RegisterForm.U_PASSWORD.$dirty && RegisterForm.CORFIRM_PASSWORD.$dirty)  && (User.U_PASSWORD != User.CORFIRM_PASSWORD) && !RegisterForm.CORFIRM_PASSWORD.$error.required">*Password doesnot match</span>
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="{{submitText}}" class="btn btn-default btn-success" />
+
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+</div>
+
+<script>
+
+
+</script>

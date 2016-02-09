@@ -1,0 +1,43 @@
+﻿<div ng-controller="UpdatedTasksManagerController" class="ContentActivities">
+    
+    
+    
+    <table class="TMS-table">
+        <thead>
+            <tr>
+                <td>Project Id</td>
+                <td>Task Id </td>
+                <td>Task Status</td>
+                <td>User update</td>
+                <td>Updated date</td>
+                <td>Time</td>
+            </tr>
+           
+        </thead>
+        <tbody ng-repeat="Task in TasksInfo | limitTo:5">
+            <tr class="main-row" ng-click="toggleDetail($index,Task.TASK_USER)">
+                <td> {{Task.PROJECT_ID}}</td>
+                <td> {{Task.TASK_ID}}</td>
+                <td>{{Task.TASK_STATUS}}</td>
+                <td>{{Task.USER_TASK_STATUS}}</td>
+                <td>{{Task.USER_UPDATE_DATE | jsonDate}}</td>
+                <td>{{Task.TASK_HOUR_CONSUMED}}</td>
+            </tr>
+            <tr class="extra-row" ng-show="activePosition == $index">
+                <td colspan="6">
+                    <div style="display:inline;float:left">
+                        <div>Start Date: {{Task.TASK_START_DATE | jsonDate}}</div>
+                        <div>End Date:{{Task.TASK_END_DATE | jsonDate}}</div>
+                    </div>
+                    <div style="display:inline;float:right">
+
+                    </div>
+
+                </td>
+            </tr>
+        </tbody>
+        <tfoot ng-if="TasksInfo == ''"><tr><td colspan="6">** No tasks Available</td></tr></tfoot>
+    </table>
+    
+    
+    </div>

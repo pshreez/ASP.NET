@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+        .form-control-inline {
+        min-width: 0;
+        display: inline;
+    }
+</style>
+<div class="row"  ng-controller="LoginController" >
+   
+    <div class="col-md-8" style="width:800px;">
+        <section id="LoginForm">
+            
+            <form  name="LoginForm" ng-submit="UserLoginFunc()" class="form-horizontal">
+                
+                <div  class="error" ng-show="Iserror">{{LoginErrorMessage}} </div>
+                <div class="success"ng-show="!IsSuccess">{{LoginMessage}} </div>
+                <hr />
+
+                <div form-group-validation="U_LOGIN_NAME" class="form-group ">
+                    <label for="U_LOGIN_NAME" class="col-md-2 control-label">Username:</label>
+                    <div class="col-md-10">
+                        <input type="text" name="U_LOGIN_NAME" class="form-control form-control-inline" ng-model="User.U_LOGIN_NAME" ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="error" ng-show="(LoginForm.U_LOGIN_NAME.$dirty || Submitted) && LoginForm.U_LOGIN_NAME.$error.required"> USername required</span>
+                    </div>
+                </div>
+
+                <div form-group-validation="cU_PASSWORD" class="form-group">
+                    <label for="cU_PASSWORD" class="col-md-2 control-label">Password:</label>
+                    <div class="col-md-10">
+                        <input type="password" class="form-control form-control-inline" name="cU_PASSWORD" ng-model="User.U_PASSWORD" ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="error" ng-show="(LoginForm.cU_PASSWORD.$dirty || Submitted) && LoginForm.cU_PASSWORD.$error.required"> Password required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            <input type="checkbox" name="RememberMe " />
+
+                            <label for="RememberMe">RememberMe </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Log in" class="btn btn-default btn-success"/> 
+                    </div>
+                </div>
+                
+
+            </form>
+            
+
+           
+        </section>
+    </div>
+
+</div>
+@section Scripts{ 
+
+
+  <script>
+      MyApp.factory('SessionFactory', SessionFactory);
+      SessionFactory.$inject = ['$http'];
+      function SessionFactory($http) {
+
+         // var fac = {};
+         // fac.CreateSession = function (d) {
+            //  console.log(d);
+                return {
+                    set: function (key, value) {
+                        return sessionStorage.setItem(key, value);
+                    },
+                    get: function (key) {
+                        return sessionStorage.getItem(key);
+                    },
+                    destroy: function (key) {
+                        $http.post('/User/DestroySession');
+                        return sessionStorage.removeItem(key);
+                    }
+          };
+
+          /*  fac.islogged = function () {
+        
+            }*/
+
+         // return fac;
+      }
+  </script>
+    
+  
+
+    
+}

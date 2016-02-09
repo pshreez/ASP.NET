@@ -1,0 +1,73 @@
+﻿
+<div  >
+
+
+       <div class="menu" ng-if="!IsLoggedIn">
+           <div class="navbar-inner">
+               <div class="container">
+                   <ul class="nav navbar-nav navbar-left" style="padding-left:100px">
+                       <li ng-class="{active: $state.includes('home')}">
+                           <a class="brand" ui-sref="home">Home</a>
+                       </li>
+
+
+                   </ul>
+
+                   <ul class="nav navbar-nav navbar-right">
+                       <li class="liststyle" ng-class="{active: $state.includes('login')}">
+                           <a class="brand" ui-sref="login">Login</a>
+                       </li>
+                       <li ng-class="{active: $state.includes('register')}"> <a class="brand" ui-sref="register">Register</a></li>
+                   </ul>
+
+               </div>
+           </div>
+       </div>
+       <span> {{}}</span>
+   </div>
+
+
+
+<div  ng-controller="LoginController" >
+
+    <div class="col-md-8" style="float:right">
+        <section id="LoginForm">
+            <div class="error" ng-show="Iserror">{{LoginErrorMessage}} </div>
+            <div class="success" ng-show="!IsSuccess">{{LoginMessage}} </div>
+           
+            <form novalidate="novalidate" name="LoginForm" ng-submit="UserLoginFunc()" class="tms-form form-horizontal">
+                <div form-group-validation="U_LOGIN_NAME" class="form-row-dataset form-group ">
+                    <label for="U_LOGIN_NAME" class="view-label-tms col-md-2 control-label">Username:</label>
+                    <div class="col-md-10">
+                        <input type="text" name="U_LOGIN_NAME" class="form-control form-control-inline" 
+                               ng-model="User.U_LOGIN_NAME" ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="form-error" ng-show="(LoginForm.U_LOGIN_NAME.$dirty || Submitted) && LoginForm.U_LOGIN_NAME.$error.required">*Username required</span>
+                        <span class="form-error" ng-show=" !LoginForm.U_LOGIN_NAME.$error.required && LoginForm.U_LOGIN_NAME.$error.unique">Username doesnt exist</span>
+                    </div>
+                </div>
+
+                <div form-group-validation="cU_PASSWORD" class="form-row-dataset form-group">
+                    <label for="cU_PASSWORD" class="view-label-tms col-md-2 control-label">Password:</label>
+                    <div class="col-md-10">
+                        <input type="password" class="form-control form-control-inline" name="cU_PASSWORD" ng-model="User.U_PASSWORD" 
+                                                                                 ng-class="Submitted?'ng-dirty':''" required autofocus />
+                        <span class="form-error" ng-show="(LoginForm.cU_PASSWORD.$dirty || Submitted) && LoginForm.cU_PASSWORD.$error.required">*Password required</span>
+                    </div>
+                </div>
+               
+                <div class="form-actions">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Log in" class="btn btn-default btn-success" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+ 
+
+
+
+
+

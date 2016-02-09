@@ -1,0 +1,38 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Assign users</h3>
+</div>
+<form novalidate="novalidate" name="AssignTaskForm" ng-submit="AssignTaskToUserFunc()" class="tms-form form-horizontal">
+    <div class="modal-body" style="min-height:100px">
+
+
+        <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+        <div class="form-group">
+            <label for="TASK_USER_ID" class="view-label-tms col-md-2 control-label">Users:</label>
+            <div class="col-md-10">
+                <div ng-dropdown-multiselect="" options="UsersList" ng-model="TaskAssign.TASK_USER_ID" selected-model="Usermodel" checkboxes="true" extra-settings="UserDropdownsettings" ng-class="Submitted?'ng-dirty':''" ng-required="true" autofocus></div>
+
+
+                <!----div style="float: left" ng-repeat="selectedData in Usermodel">
+
+                    <button ng-click="removeFirstItem(selectedData)">
+                        {{selectedData.id + '   ' +'x'}}
+                    </button>
+                    <div>
+                        {{getUsername(selectedData.id)}}
+                    </div>
+                </div-->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Assign" class="btn btn-default btn-success" />
+                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    </form>

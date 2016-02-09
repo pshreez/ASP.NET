@@ -1,0 +1,67 @@
+﻿<div ng-controller="DeadlineTasksController" class="ContentActivities">
+    <div>
+
+        <table class="TMS-table">
+            <thead>
+                <tr>
+                    <td>Task  ID</td>
+                    <td>Name </td>
+                    <td>Start date</td>
+                    <td>End date</td>
+                    <td>Status</td>
+                    <td>Created on </td>
+                    <td>Assign date</td>
+                    <td>Days remaining </td>
+                </tr>
+
+            </thead>
+            <tbody ng-repeat="Task in taskAssigned | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage |filter:query as results">
+                <tr class="main-row" ng-click="toggleDetail($index,Task.TASK_PROJECT_ID,Task.TASK_USER_ID)">
+                    <td> {{Task.TASK_ID_ASSIGNED}}</td>
+                    <td> {{Task.TASK_NAME}}</td>
+                    <td>{{Task.TASK_START_DATE | jsonDate}}</td>
+                    <td>{{Task.TASK_END_DATE | jsonDate}}</td>
+                    <td>{{Task.TASK_STATUS}}</td>
+                    <td>{{Task.U_TASK_CREATE_DATE | jsonDate}}</td>
+                    <td>{{Task.TASK_ASSIGN_DATE | jsonDate}}</td>
+                    <td>{{Task.Days }}</td>
+
+                </tr>
+                <tr class="extra-row" ng-show="activePosition == $index" style="background:white">
+                    <td colspan="8" style="background:white">
+                        <div>Estimated hours: {{Task.TASK_ESTIMATED_HOUR}}</div>
+                        <div>Description: {{Task.TASK_DESCRIPTION}}</div>
+
+                        <button ng-click="UpdateTask(Task)">Update Task</button>
+
+                        <div ng-if="ProjectManager != ''">
+                            Assigned by:
+                            <ul ng-repeat="Manager in ProjectManager" style="display:inline">
+
+                                <li style="display:inline">{{Manager.U_FIRST_NAME + ' ' + Manager.U_LAST_NAME}} </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+
+            <tfoot><tr ng-if="Tasks == ''"><td colspan="8">** No Projects available **</td></tr></tfoot>
+        </table>
+
+
+
+        <div class="pagination-div " style="padding-left:50px;">
+            <ul class="pagination">
+                <li ng-class="DisablePrevPage()">   <a href ng-click="prevPage()"> Prev</a> </li>
+                <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)"><a href>{{n+1}}</a>  </li>
+                <li ng-class="DisableNextPage()"><a href ng-click="nextPage()">Next </a> </li>
+                <li> <span style="color:#697df5"> Total :{{availableTasks}} </span>  </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

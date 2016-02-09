@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+.LoadActivities{
+        margin:auto;
+    }
+
+a{
+    color:#808080;
+}
+a:hover{
+    color:red;
+}
+.liststyle{
+    background-color:white;
+}
+.menu{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e1e1e1+100,f6f6f6+100 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(225,225,225,1) 100%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(225,225,225,1) 100%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(225,225,225,1) 100%,rgba(246,246,246,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(225,225,225,1) 100%,rgba(246,246,246,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+border-bottom:1px solid #808080;
+background-color:#f6f6f6;
+padding:5px;
+}
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+     /*  color: black;
+        background-color: white;
+        border-bottom: 2px solid #0094ff;*/ 
+    }
+
+    .nav-pills > li > a {
+        border-radius: 0px;
+    }
+
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        /* color: #ffffff; */
+        /* background-color: #428bca; */
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+       
+    }
+
+    a:hover {
+        color: #3A2E2E;
+    }
+</style>
+<div  style="min-height:700px;min-width:1024px;" >
+    <!--div ng-controller="HomeMenuController" >
+            
+        
+        <div class="menu" ng-if="!IsLoggedIn">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left" style="padding-left:100px">
+                        <li ng-class="{active: $state.includes('home')}" ng-show="false">
+                            <a class="brand" ui-sref="home">Home</a>
+                        </li>
+                        
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="liststyle" ng-class="{active: $state.includes('login')}">
+                            <a class="brand" ui-sref="login">Login</a>
+                        </li>
+                        <li ng-class="{active: $state.includes('register')}"> <a class="brand" ui-sref="register">Register</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <span> {{}}</span>
+    </div-->
+   
+    
+    <div ui-view="main" style="position:relative;clear:both;background-color:white;min-height:800px;border:1px solid #f8efb3; margin:auto;"></div>  
+           
+    
+
+ </div>
+
+
+
+
+
+
+
+<footer style="clear:both;text-align:center;margin-top:12px;padding:12px;border-top:1px dashed #808080;">
+    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+</footer>
+
+

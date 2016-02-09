@@ -1,0 +1,94 @@
+﻿<style>
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+     /*  color: black;
+        background-color: white;
+        border-bottom: 2px solid #0094ff;*/ 
+    }
+
+    .nav-pills > li > a {
+        border-radius: 0px;
+    }
+
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        /* color: #ffffff; */
+        /* background-color: #428bca; */
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: white;
+    }
+
+    a:hover {
+        color: #3A2E2E;
+    }
+
+    .UserButton{
+        background-color:#878383;
+    }
+   
+
+    .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    
+    text-decoration: none;
+     background-color: #428bca;
+    }
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    /* background-color: #3276b1; */
+    /* border-color: #285e8e; */
+}
+   
+
+</style>
+
+<div ng-controller="HomeMenuController" >
+
+
+    <div >
+        <div class="navbar-inner">
+            <div class="container">
+
+
+                <div class="navbar-right" uib-dropdown is-open="status.isopen" style="position:relative;" >
+                    Logged in as : <button id="single-button" type="button" class="btn btn-primary UserButton" uib-dropdown-toggle ng-disabled="disabled">
+                       <i  ng-if="userName!=null">{{userName}}</i>  <span class="caret"></span>
+                    </button>
+                    <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button" style="">
+                       
+                        <li role="menuitem"><a class="brand" style="text-decoration:underline" ng-click="logOut()">Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <span> {{}}</span>
+</div>
+
+<div ng-controller="MainMenuCtrl">
+   
+    <div class="Maintab" >
+        
+        <uib-tabset >
+
+            <uib-tab ng-repeat="tab in tabs"
+                     heading="{{tab.title}}"
+                     active="tab.active"
+                     select="go(tab.route)"
+                     disable="tab.disabled">             
+            </uib-tab>
+        </uib-tabset>
+
+     </div>
+    <div class="mainMenuView"  style="border-left:1px solid #e1dede;border-right:1px solid #e1dede;border-bottom:1px solid #e1dede;min-height:500px">
+        <ui-view autoscroll="false" >  </ui-view>
+       
+    </div>
+
+  
+    
+</div>
+
+

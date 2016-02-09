@@ -1,0 +1,133 @@
+﻿
+<style>
+    .Table {
+        width: 800px;
+        padding: 12px;
+        margin-left: 50px;
+        display: table;
+    }
+
+    .Title {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .Heading Cell {
+        align-items: flex-start;
+    }
+
+    .Heading {
+        background: black;
+        color: white;
+        font-weight: bold;
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .Row {
+        background-color: white;
+        display: table-row;
+    }
+
+
+    .Cell {
+        padding: 8px;
+        display: table-cell;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .displayInline {
+        display: inline;
+    }
+</style>
+<div ng-controller="TaskListController">
+
+    <div class="tableList">
+        <div style="float:right;padding:12px;padding-right:30px;">
+            <!--Sidebar content-->
+            Search: <input ng-model="query" placeholder="Search by user name">
+            <p>{{mine}}</p>
+        </div>
+    </div>
+
+
+    <div class="Table" style="clear:both;">
+
+        <div class="Heading">
+            <div class="Cell">
+                <p>Task Name</p>
+            </div>
+            <div class="Cell">
+                <p>Start Date </p>
+            </div>
+            <div class="Cell">
+                <p>End Date </p>
+            </div>
+            <div class="Cell">
+                <p>Status</p>
+            </div>
+            <div class="Cell">
+                <p>Description</p>
+            </div>
+            <div class="Cell">
+                <p></p>
+            </div>
+            <div class="Cell">
+                <p>Actions</p>
+            </div>
+
+        </div>
+        <div class=" Row" ng-repeat="Task in Tasks | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage |filter:query as results">
+            <div class="Cell">
+                <p>{{Task.TASK_NAME}}</p>
+            </div>
+            <div class="Cell">
+                <p>{{Task.TASK_START_DATE | jsonDate}}</p>
+            </div>
+            <div class="Cell">
+                <p>{{Task.TASK_END_DATE | jsonDate}}</p>
+            </div>
+            <div class="Cell">
+                <p>{{Task.TASK_STATUS}}</p>
+            </div>
+            <div class="Cell">
+                <p>{{Task.TASK_DESCRIPTION}}</p>
+            </div>
+            <div class="Cell">
+
+                <p></p>
+            </div>
+            <div class="Cell">
+                <ul class="displayInline">
+                   
+
+                    <li class="displayInline" ng-class="{active: $state.includes('edit')}">
+                        <a class="brand" ui-sref="user.Tasks.details({uid: {{ Task.TASK_ID}}})">Details</a>
+                    </li>
+                    <li class="displayInline" ng-class="{active: $state.includes('edit')}">
+                        <a class="brand" ui-sref="user.Tasks.assign({uid: {{ Task.TASK_ID}}})">Assign</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="pagination-div " style="padding-left:50px;">
+        <ul class="pagination">
+            <li ng-class="DisablePrevPage()">   <a href ng-click="prevPage()"> Prev</a> </li>
+            <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)"><a href>{{n+1}}</a>  </li>
+            <li ng-class="DisableNextPage()"><a href ng-click="nextPage()">Next </a> </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
