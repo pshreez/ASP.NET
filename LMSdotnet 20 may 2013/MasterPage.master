@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <div>
+        <div id="header">
+		    <div class="center">
+			    <div id="company-name">Company Name</div>	
+
+			    <div id="menu">
+                    <a href="TitleMaster.aspx">Title Master</a><a href="#">ABOUT US</a><a href="#">SERVICES</a><a href="#">PARTNERS</a><a href="#">CONTACT US</a>
+			    </div> <!-- #menu -->
+		    </div><!-- .center -->
+
+	    </div>
+        <div align="center">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+		<div id="center_footer">
+			<div id="left_footer"><b>Find Us On</b>
+				<ul>
+					<li><a href="#"><img src="images/facebook.png" alt="facebook" ></a></li>
+					<li><a href="#"><img src="images/twitter.png" alt="facebook" ></a></li>
+					<li><a href="#"><img src="images/youtube.png" alt="facebook" ></a></li>
+					<li><a href="#"><img src="images/rss.png" alt="facebook" ></a></li>
+				</ul>
+			</div> <!-- #left_footer -->
+			
+			<div id="right_footer">
+				<a href="index.html">HOME</a><a href="#">ABOUT US</a><a href="#">SERVICES</a>><a href="#">PARTNERS</a><a href="#">CONTACT US</a>
+				<br /><br />
+				
+			</div> <!-- #right_footer -->
+			<span>&copy; Your Website Name 2011 </span>
+		</div> <!-- #center_footer -->
+	</div>
+    </div>
+    </form>
+</body>
+</html>
